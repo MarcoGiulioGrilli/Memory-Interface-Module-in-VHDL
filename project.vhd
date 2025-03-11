@@ -20,14 +20,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
-
-
--- UNISIM;
---use UNISIM.VComponents.all;
 
 entity project_reti_logiche is
     port (
@@ -56,7 +49,7 @@ variable next_state, curr_state : state :=START;
 variable sel_1: std_logic :='0';-- bit per tenere traccia delle prima lettura di i_w
 variable sel_2: std_logic :='0';-- bit per tenere traccia delle seconda lettura di i_w
 variable data_reg : std_logic_vector(15 downto 0) := "0000000000000000"; -- registro per l'indirizzo di memoria
-variable z0 : std_logic_vector(7 downto 0):="00000000"; -- variabili per tenere conto delle uscite quando o_done è 1
+variable z0 : std_logic_vector(7 downto 0):="00000000"; -- variabili per tenere conto delle uscite quando o_done Ã¨ 1
 variable z1 : std_logic_vector(7 downto 0):="00000000"; 
 variable z2 : std_logic_vector(7 downto 0):="00000000"; 
 variable z3 : std_logic_vector(7 downto 0):="00000000"; 
@@ -180,5 +173,3 @@ if(i_clk'event and i_clk='1') then
   end if;
 end process;
 end Behavioral;   
-       
-    
